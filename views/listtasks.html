@@ -1,0 +1,59 @@
+<html>
+<head>
+   
+     <link rel="stylesheet" href="a.css">
+     <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+
+    <div class="header">
+        <div class="header-right">
+                <img src="l.png">
+         <a class="active"href="listtasks">List All Tasks</a>
+            <a href="/addtask">Add New Task</a>
+            <a href="/deletetask">Delete Task</a>
+            <a href="/updatetask">Update Tasks</a>
+            <a href="/">Home</a>
+            
+           
+        </div>
+     
+    </div>
+  
+</head>
+
+<body>
+    </br>
+    <h1>
+        <table>
+            <tr>
+                <td>Task Id</td>
+                <td>Task Name</td>
+                <td>Assign To</td>
+                <td>Due Date</td>
+                <td>Status</td>
+                <td>Description</td>
+            </tr>
+            <% for (let i =0; i< taskdb.length;i++){ %>
+                <tr>
+                    <td>
+                        <%= taskdb[i].id %>
+                    </td>
+                    <td>
+                        <%= taskdb[i].name %>
+                    </td>
+                    <td>
+                        <%= taskdb[i].assignto %>
+                    </td>
+                    <td>
+                        <%= taskdb[i].due %>
+                    </td>
+                    <td>
+                        <%= taskdb[i].status %>
+                    </td>
+                    <td>
+                        <%= taskdb[i].description %>
+                    </td>
+                </tr>
+                <% }%>
+    </h1>
+</body>
+</html>
